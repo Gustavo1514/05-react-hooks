@@ -1,3 +1,7 @@
-body{
-    padding: 60px;
+body {
+  padding: 60px;
+}
+
+.boton-focus {
+  margin-top: 3rem;
 }
