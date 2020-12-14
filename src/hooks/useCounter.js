@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 export const useCounter = (initialState = 10) => {
   const [counter, setcounter] = useState(initialState)
