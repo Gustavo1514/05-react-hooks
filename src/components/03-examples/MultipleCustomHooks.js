@@ -6,10 +6,10 @@ const MultipleCustomHooks = () => {
   // const [numCuote, setnumCuote]=useState('1')
 
   const { counter, increment } = useCounter(1)
-  console.log(counter)
+  // console.log(counter)
   const state = useFetch(`https://www.breakingbadapi.com/api/quotes/${counter}`)
 
-  console.log(state)
+  // console.log(state)
   const { loading, data } = state
   const { author, quote } = !!data && data[0]
   //   console.log(author, quote)
