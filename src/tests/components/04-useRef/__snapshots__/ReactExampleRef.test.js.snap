@@ -3,19 +3,14 @@
 exports[`Pruebas sobre <ReactExampleRef/> debe mostrarse correctamente 1`] = `
 <div>
   <h1>
-    Breaing Bad Cuotes
+    React example ref
   </h1>
   <hr />
-  <div
-    className="alert alert-info text-center"
-  >
-    Loading
-  </div>
   <button
     className="btn btn-primary"
     onClick={[Function]}
   >
-    Nueva Frase
+    Show / Hide
   </button>
 </div>
 `;

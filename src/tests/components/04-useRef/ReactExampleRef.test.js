@@ -1,13 +1,19 @@
 const { shallow } = require('enzyme')
 const {
-  default: MultipleCustomHooks
-} = require('../../../components/03-examples/MultipleCustomHooks')
+  default: ReactExampleRef
+} = require('../../../components/04-useRef/ReactExampleRef')
 
 describe('Pruebas sobre <ReactExampleRef/>', () => {
+  const wrapper = shallow(<ReactExampleRef />)
   test('debe mostrarse correctamente', () => {
-    const wrapper = shallow(<MultipleCustomHooks />)
     expect(wrapper).toMatchSnapshot()
+    expect(wrapper.find('MultipleCustomHooks').exists()).toBe(false)
   })
 
-  test('debe mostrar el componente < MultipleCustomHooks/>', () => {})
+  test('debe mostrar el componente <MultipleCustomHooks/>', () => {
+    const wrapper = shallow(<ReactExampleRef />)
+
+    wrapper.find('button').simulate('click')
+    expect(wrapper.find('MultipleCustomHooks').exists()).toBe(true)
+  })
 })
