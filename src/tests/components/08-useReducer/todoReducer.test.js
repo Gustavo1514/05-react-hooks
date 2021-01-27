@@ -10,7 +10,7 @@ describe('Pruebas en todoReducer', () => {
   test('debe agregar un TODO', () => {
     const todo = {
       id: 3,
-      desc: 'Aprender Box',
+      description: 'Aprender Box',
       done: false
     }
     const action = {
@@ -35,7 +35,17 @@ describe('Pruebas en todoReducer', () => {
     expect(state).toEqual(demoTodos.filter(demotodo => demotodo.id !== id))
   })
 
-  test('debe hacer el toogle del todo (cambiar estado)', () => {
-      
-  });
+  test('debe hacer el toggle del todo (cambiar estado)', () => {
+    const id = 1
+    const action = {
+      type: 'toggle',
+      payload: id
+    }
+
+    const state = todoReducer(demoTodos, action)
+
+    expect(state[0].done).toBe(true)
+    expect(state[1]).toEqual(demoTodos[1])
+
+  })
 })

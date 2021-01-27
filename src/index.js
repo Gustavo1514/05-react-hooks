@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import MainApp from './components/09-useContext/MainApp'
 // import CallBackHook from './components/06-memos/CallBackHook'
 // import MemoHook from './components/06-memos/MemoHook'
-// import TodoApp from './components/08-useReducer/TodoApp'
+import TodoApp from './components/08-useReducer/TodoApp'
 // import { CounterApp } from './components/01-useState/CounterApp'
 // import CounterWithCustomHook from './components/01-useState/CounterWithCustomHook'
 // import FormWithCustomHook from './components/02-useEffect/FormWithCustomHook'
@@ -26,7 +26,8 @@ ReactDOM.render(
   // <Memorize />,
   // <MemoHook/>,
   // <CallBackHook />,
-  <MainApp />,
+
+  <TodoApp />,
 
   document.getElementById('root')
 )
